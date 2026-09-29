@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react";
 import { applyFilters, DEFAULT_FILTERS, type Filters } from "./features/filters/applyFilters";
 import { FilterBar } from "./features/filters/FilterBar";
+import { FocusPanel } from "./features/panels/FocusPanel";
+import { NotesPanel } from "./features/panels/NotesPanel";
+import { RememberPanel } from "./features/panels/RememberPanel";
 import { TaskForm } from "./features/tasks/TaskForm";
 import { TaskList } from "./features/tasks/TaskList";
 import { useTasks } from "./features/tasks/useTasks";
@@ -26,6 +29,11 @@ export default function App() {
           <FilterBar filters={filters} onChange={setFilters} />
           <TaskList tasks={visible} total={tasks.length} dispatch={dispatch} />
         </main>
+        <aside className="side-col" aria-label="Side panels">
+          <FocusPanel />
+          <NotesPanel />
+          <RememberPanel />
+        </aside>
       </div>
     </div>
   );
