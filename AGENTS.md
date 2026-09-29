@@ -29,13 +29,13 @@ src/
 ```
 Each feature folder owns its components, logic and tests. Cross-feature imports go through `types.ts` or `lib/`.
 
-## Design system — "Concrete + Dusty Rose"
+## Design system — "Charcoal + Hot Pink"
 Modernist, blunt, masculine. Do not soften it.
-- Colors are CSS variables in `:root` (`--concrete`, `--ink`, `--rose`, `--rose-deep`, `--rose-wash`). Never hard-code hex values in components.
-- Square corners (no `border-radius`), 3px black borders, hard offset shadows (no blur).
+- Colors are CSS variables in `:root` (`--concrete`, `--paper`, `--ink`, `--rose`, `--rose-deep`, `--on-rose`). Never hard-code hex values in components.
+- Square corners (no `border-radius`), 2px grey borders, hard pink offset shadows (no blur), pink title bars.
 - Type: Space Grotesk (UI) + JetBrains Mono (labels, metadata, uppercase).
 - Must work at 360px wide (phone) and 1440px wide (laptop). Touch targets >= 44px. Mobile is single column; laptop uses a main column + sticky side column (breakpoint 900px).
-- Keep contrast AA: ink on concrete/paper/rose only. Focus rings must stay visible.
+- Keep contrast AA: light ink on charcoal, charcoal on pink only. Focus rings must stay visible.
 
 ## Git workflow
 - One feature per branch: `feature/<name>`, merged into `main` with `--no-ff`.

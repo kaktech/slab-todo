@@ -1,6 +1,6 @@
 # SLAB — a to-do list
 
-Modernist, blunt, pink. Concrete + dusty-rose design; works on phone and laptop.
+Modernist, blunt, pink. Charcoal + hot-pink design; works on phone and laptop.
 
 ## Features
 - **Tasks** — add, edit (inline), complete, delete; categories, priority, due dates, overdue flag
