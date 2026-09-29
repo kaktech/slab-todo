@@ -110,3 +110,8 @@ label.lbl { display: block; font-family: var(--mono); font-size: 0.7rem; text-tr
 @media (min-width: 700px) { .task-actions { flex-direction: row; } }
 .empty { margin: 0; padding: 28px 14px; font-family: var(--mono); font-size: 0.9rem; color: var(--ink-soft); }
 .list-foot { border-top: 2px solid var(--ink); }
+
+/* ---------- Feature: filters ---------- */
+.filter-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+@media (min-width: 700px) { .filter-grid { grid-template-columns: repeat(4, 1fr); } }
+.linkish { background: none; border: 0; padding: 0; color: var(--rose); font: inherit; text-transform: inherit; letter-spacing: inherit; text-decoration: underline; min-height: 24px; }
