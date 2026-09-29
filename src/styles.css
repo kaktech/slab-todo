@@ -5,7 +5,7 @@
   --ink: #111111;
   --ink-soft: #4a4543;
   --rose: #d6708a;
-  --rose-deep: #b4506b;
+  --rose-deep: #a03e59;
   --rose-wash: #f0cdd6;
   --line: 3px solid var(--ink);
   --shadow: 5px 5px 0 var(--ink);
@@ -76,3 +76,37 @@ button { cursor: pointer; }
 }
 textarea.field { resize: vertical; min-height: 120px; }
 label.lbl { display: block; font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+
+/* ---------- Feature: tasks ---------- */
+.form-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.span-all { grid-column: 1 / -1; }
+.form-submit { display: flex; align-items: flex-end; }
+.form-submit .btn { width: 100%; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+@media (min-width: 700px) {
+  .form-grid { grid-template-columns: 1fr 1fr 1fr auto; }
+  .span-all { grid-column: 1 / -1; }
+}
+
+.tasks { list-style: none; margin: 0; padding: 0; }
+.task { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border-bottom: 2px solid var(--ink); }
+.task:last-child { border-bottom: 0; }
+.task.done .task-title { text-decoration: line-through; color: var(--ink-soft); }
+.task.done { background: var(--concrete-2); }
+.check {
+  flex: none; width: 32px; height: 32px; border: var(--line); background: var(--paper);
+  color: var(--rose-deep); font-size: 1.1rem; line-height: 1; padding: 0; margin-top: 2px;
+}
+.check[aria-checked="true"] { background: var(--rose); color: var(--ink); }
+.task-main { flex: 1; min-width: 0; }
+.task-title { font-weight: 500; font-size: 1.05rem; overflow-wrap: anywhere; }
+.edit { min-height: 40px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; border: 2px solid var(--ink); padding: 1px 6px; background: var(--paper); }
+.tag.pri-high { background: var(--ink); color: var(--concrete); }
+.tag.pri-med { background: var(--rose); }
+.tag.overdue { background: var(--rose-deep); color: var(--paper); }
+.task-actions { display: flex; flex-direction: column; gap: 6px; }
+@media (min-width: 700px) { .task-actions { flex-direction: row; } }
+.empty { margin: 0; padding: 28px 14px; font-family: var(--mono); font-size: 0.9rem; color: var(--ink-soft); }
+.list-foot { border-top: 2px solid var(--ink); }
