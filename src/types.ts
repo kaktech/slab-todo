@@ -12,4 +12,6 @@ export interface Task {
   /** ISO date `YYYY-MM-DD`, or null when no due date. */
   due: string | null;
   createdAt: number;
+  /** Epoch ms when last marked done; null/undefined when active. */
+  completedAt?: number | null;
 }

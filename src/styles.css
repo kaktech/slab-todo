@@ -160,3 +160,15 @@ label.lbl { display: block; font-family: var(--mono); font-size: 0.7rem; text-tr
 .remember .field::placeholder { color: var(--ink-soft); }
 ::placeholder { color: var(--ink-soft); }
 input[type="date"] { color-scheme: dark; }
+
+/* ---------- Feature: stats ---------- */
+.stat-row { display: flex; gap: 32px; margin-bottom: 12px; }
+.stat-num { font-size: 2.6rem; font-weight: 700; line-height: 1; letter-spacing: -0.03em; }
+.stat-num small { font-size: 1rem; color: var(--rose); margin-left: 2px; }
+.bar { height: 14px; border: var(--line); background: var(--concrete); margin-bottom: 16px; }
+.bar-fill { height: 100%; background: var(--rose); transition: width 0.25s; }
+.week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: end; text-align: center; }
+.week li { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; }
+.week-bar { width: 100%; background: var(--rose); min-height: 4px; }
+.week-count { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); }
+.week .lbl { margin: 0; }

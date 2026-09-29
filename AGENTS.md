@@ -26,6 +26,7 @@ src/
     tasks/                 core tasks + categories + priorities + due dates
     filters/               search, filter, sort
     panels/                Notes, Focus, Remember side panels
+    stats/                 completion %, streak, 7-day chart (uses Task.completedAt)
 ```
 Each feature folder owns its components, logic and tests. Cross-feature imports go through `types.ts` or `lib/`.
 

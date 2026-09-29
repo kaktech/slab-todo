@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { applyFilters, DEFAULT_FILTERS, type Filters } from "./features/filters/applyFilters";
 import { FilterBar } from "./features/filters/FilterBar";
+import { StatsPanel } from "./features/stats/StatsPanel";
 import { FocusPanel } from "./features/panels/FocusPanel";
 import { NotesPanel } from "./features/panels/NotesPanel";
 import { RememberPanel } from "./features/panels/RememberPanel";
@@ -30,6 +31,7 @@ export default function App() {
           <TaskList tasks={visible} total={tasks.length} dispatch={dispatch} />
         </main>
         <aside className="side-col" aria-label="Side panels">
+          <StatsPanel tasks={tasks} />
           <FocusPanel />
           <NotesPanel />
           <RememberPanel />

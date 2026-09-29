@@ -12,7 +12,7 @@ export function tasksReducer(tasks: Task[], action: TaskAction): Task[] {
     case "add":
       return [action.task, ...tasks];
     case "toggle":
-      return tasks.map((t) => (t.id === action.id ? { ...t, done: !t.done } : t));
+      return tasks.map((t) => (t.id === action.id ? { ...t, done: !t.done, completedAt: t.done ? null : Date.now() } : t));
     case "remove":
       return tasks.filter((t) => t.id !== action.id);
     case "update":
